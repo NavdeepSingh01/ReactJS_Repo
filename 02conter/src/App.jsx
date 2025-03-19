@@ -7,7 +7,10 @@ function App() {
   let [counter,setCounter]=useState(0)
 
   function addOne(){
-    setCounter(counter+1)
+    setCounter((prevCounter)=>prevCounter+1)
+    setCounter((prevCounter)=>prevCounter+1)
+    setCounter((prevCounter)=>prevCounter+1)
+    setCounter((prevCounter)=>prevCounter+1)
   }
   function reduceOne(){
     setCounter(counter-1)
