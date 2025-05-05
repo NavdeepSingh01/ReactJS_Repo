@@ -29,11 +29,12 @@ export class Service{
                 }
             ) 
         } catch (error) {
-            throw error;
+            console.log("Appwrite Sevice :: CreatePost :: error",error);
+            
         }
     }
 
-    async updatePost({title,slug,content,featuredImage,status}){
+    async updatePost(slug,{title,content,featuredImage,status}){
         try {
             return this.databases.updateDocument(
                 conf.appwriteDatabaseID,
@@ -47,7 +48,8 @@ export class Service{
                 }
             )
         } catch (error) {
-            throw error;
+            console.log("Appwrite Service :: updatePost :: error",error);
+            
         }
     }
 
@@ -60,7 +62,7 @@ export class Service{
             )
             return true;
         } catch (error) {
-            console.log("Appwrite Service :: Delete",error);
+            console.log("Appwrite Service :: Delete :: error",error);
             return false;
         }
     }
